@@ -26,8 +26,8 @@ jobs:
                 path: ~/.npm 
                 key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
                 restore-keys: |
-                ${{ runner.OS }}-node-
-                ${{ runner.OS }}-
+                    ${{ runner.OS }}-node-
+                    ${{ runner.OS }}-
             - name: Install dependencies
               run: npm install
             - name: Lint
