@@ -60,6 +60,3 @@ jobs:
                 heroku_api_key: ${{secrets.HEROKU_API_KEY}}
                 heroku_app_name: ci-cd-nodejs #Must be unique in Heroku
                 heroku_email: marwenhanzouli@gmail.com
-                publish-dir: './build'
-                production-branch: master
-                deploy-message: "Deploy from GitHub Actions"
