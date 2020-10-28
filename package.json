@@ -1,0 +1,28 @@
+{
+  "name": "ci-cd-nodejs-githubactions-heroku",
+  "version": "1.0.0",
+  "description": "This is example contain an pipeline CI/CD with github actions and heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarwenHanzouli/ci-cd-nodejs-heroku.git"
+  },
+  "keywords": [
+    "Pipeline",
+    "CI/CD",
+    "NodeJs",
+    "Github",
+    "Actions",
+    "Heroku"
+  ],
+  "author": "Marwen Hanzouli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarwenHanzouli/ci-cd-nodejs-heroku/issues"
+  },
+  "homepage": "https://github.com/MarwenHanzouli/ci-cd-nodejs-heroku#readme"
+}
