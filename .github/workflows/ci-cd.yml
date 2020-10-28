@@ -9,7 +9,7 @@ jobs:
 
         strategy:
             matrix:
-                node-version: [8.x, 10.x, 12.x]
+                node-version: [12.x]
             
         steps:
             - name: Checkout source code
@@ -30,8 +30,6 @@ jobs:
                     ${{ runner.OS }}-
             - name: Install dependencies
               run: npm install
-            - name: Lint
-              run: npm run lint
             - name: Unit tests
               run: npm run test
             - name: Build app if present
