@@ -6,8 +6,9 @@ async function controller(req,res){
     return res.status(200).send();
 }
 
-function add(req,res){
-    model.ajouter(req.body);
+async function add(req,res){
+    let result=await model.ajouter(req.body);
+    console.log(result)
     return res.status(201).send();
 }
 
@@ -16,4 +17,9 @@ function getByIndex(req,res){
     return res.json(result).status(201).send();
 }
 
-module.exports={controller,add,getByIndex}
+async function getAll(req,res){
+    let result=await model.getAll();
+    return res.json(result).status(201).send();
+}
+
+module.exports={controller,add,getByIndex,getAll}

@@ -20,6 +20,7 @@ app.use(bodyParser.json())
 
 usersRoutes.get(app);
 usersRoutes.add(app);
+usersRoutes.getAll(app);
 
 app.listen(port, () =>  { // ecoute du serveur sur le port 8080
     console.log('le serveur fonctionne')

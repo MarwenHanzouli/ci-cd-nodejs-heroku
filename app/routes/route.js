@@ -8,4 +8,7 @@ function get(app){
     app.get("/users/:index",controller.getByIndex);
 }
 
-module.exports={add,get}
+function getAll(app){
+    app.get("/users",controller.getAll);
+}
+module.exports={add,get,getAll}
