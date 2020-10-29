@@ -6,7 +6,6 @@ const db=databasePostgres.db;
 const databaseMongo=require('../database/config-mongodb');
 const client=databaseMongo.client;
 
-
 let table=[]
 
 function ajouter(obj){
