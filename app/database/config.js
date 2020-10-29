@@ -15,6 +15,4 @@ const connectionConf = {
 }
 const db=pgp(connectionConf);
 
-//const db = pgp("postgres://kfbsuzjfiuxlpt:07f23c1d2a2fef2c6db2240eb4a31bf7471f1e557b508658f10ebcd3e0df4d23@ec2-54-247-103-43.eu-west-1.compute.amazonaws.com:5432/daqp7mreb3jhd3?ssl=true");
-
 module.exports= {db}
