@@ -5,21 +5,21 @@ const db=databasePostgres.db;
 
 const databaseMongo=require('../database/config-mongodb');
 const client=databaseMongo.client;
-
+var collection;
+client.connect(() => {
+    collection = client.db(process.env.MONGO_NAME).collection("users");
+    //client.close();
+});
 let table=[]
 
 function ajouter(obj){
-    client.connect(async (err) => {
-        const collection = client.db(process.env.MONGO_NAME).collection("users");
-        await collection.insertOne(obj);
-        // perform actions on the collection object
-        client.close();
-    });
-    table.push(obj);
-    return db.query('INSERT INTO users (name, email) VALUES ($1, $2)',[obj.name,obj.email]);
+    return collection.insertOne(obj);
+    //table.push(obj);
+    //return db.query('INSERT INTO users (name, email) VALUES ($1, $2)',[obj.name,obj.email]);
 }
 function getAll(){
     return db.query('SELECT * FROM users ORDER BY id ASC');
+    return 
     //return table;
 }
 function getByIndex(index){
