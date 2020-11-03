@@ -6,9 +6,8 @@ async function controller(req,res){
     return res.status(200).send();
 }
 
-async function add(req,res){
-    let result=await model.ajouter(req.body);
-    console.log(result)
+function add(req,res){
+    model.ajouter(req.body);
     return res.status(201).send();
 }
 
